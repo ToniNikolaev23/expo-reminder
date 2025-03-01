@@ -38,6 +38,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8416327f-abe2-430c-83db-72f0371dc9cf"
+      }
+    },
+    "owner": "toninikolaev23"
   }
 }
