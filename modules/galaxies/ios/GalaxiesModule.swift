@@ -9,6 +9,13 @@ public class GalaxiesModule: Module {
     // Can be inferred from module's class name, but it's recommended to set it explicitly for clarity.
     // The module will be accessible from `requireNativeModule('Galaxies')` in JavaScript.
     Name("Galaxies")
+      
+      Function("getDeviceInfo") { () -> [String: String] in
+          return [
+            "deficeInfo": UIDevice.current.model,
+            "appVersion": Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+          ]
+      }
 
     // Sets constant properties on the module. Can take a dictionary or a closure that returns a dictionary.
     Constants([
@@ -20,7 +27,7 @@ public class GalaxiesModule: Module {
 
     // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
     Function("hello") {
-      return "Hello world! 👋"
+      return "Hello test! 👋"
     }
 
     // Defines a JavaScript function that always returns a Promise and whose native code
